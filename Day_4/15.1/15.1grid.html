@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header2 header2"
+          "aside content content content"
+          "footer footer footer footer";
+        height: 500px;
+        gap: 2rem;
+      }
+
+      #header1 {
+        background: red;
+        border-radius: 5%;
+        grid-area: header;
+      }
+
+      #header2 {
+        background: rgb(47, 0, 255);
+
+        border-radius: 5%;
+        grid-area: header2;
+      }
+      #aside {
+        background: rgb(0, 255, 85);
+
+        border-radius: 5%;
+        grid-area: aside;
+      }
+      #content {
+        background: rgb(195, 0, 255);
+
+        border-radius: 5%;
+        grid-area: content;
+      }
+
+      #footer {
+        background: rgb(255, 238, 0);
+
+        border-radius: 5%;
+        grid-area: footer;
+      }
+    </style>
+    <title>grid</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header" id="header1">header1</div>
+      <div class="header" id="header2">header2</div>
+      <div class="aside" id="aside">aside</div>
+      <div class="content" id="content">content</div>
+      <div class="footer" id="footer">footer</div>
+    </div>
+  </body>
+</html>

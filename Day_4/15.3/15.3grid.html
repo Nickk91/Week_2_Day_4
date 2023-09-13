@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "sidebar content content sidebar2"
+          "footer footer footer footer";
+        height: 500px;
+        grid-gap: 0.2rem;
+      }
+
+      /* Smartphones */
+      @media only screen and (max-width: 500px) {
+        body {
+          background: rgba(255, 0, 0, 0.603);
+        }
+        .container {
+          display: grid;
+          grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "content"
+            "sidebar2"
+            "footer";
+        }
+      }
+
+      /* Tablet */
+      @media (min-width: 501px) and (max-width: 768px) {
+        body {
+          background: rgba(0, 225, 255, 0.603);
+        }
+
+        .container {
+          display: grid;
+          grid-template-areas:
+            "header header header header"
+            "sidebar content content content"
+            "sidebar content content content"
+            "sidebar2 sidebar2 sidebar2 sidebar2"
+            "footer footer footer footer ";
+          grid-gap: 0.2rem;
+        }
+      }
+
+      /* Normal */
+      @media (min-width: 769px) {
+        body {
+          background: green;
+        }
+        .container {
+          display: grid;
+          grid-template-areas:
+            "header header header header"
+            "sidebar content content sidebar2"
+            "sidebar content content sidebar2"
+            "footer footer footer footer";
+          height: 500px;
+          grid-gap: 0.2rem;
+        }
+      }
+
+      #header {
+        background: red;
+        border-radius: 5%;
+        grid-area: header;
+      }
+
+      #sidebar {
+        background: rgb(47, 0, 255);
+
+        border-radius: 5%;
+        grid-area: sidebar;
+      }
+
+      #content {
+        background: rgb(69, 155, 12);
+
+        border-radius: 5%;
+        grid-area: content;
+      }
+
+      #sidebar2 {
+        background: rgb(195, 0, 255);
+
+        border-radius: 5%;
+        grid-area: sidebar2;
+      }
+
+      #footer {
+        background: rgb(238, 255, 0);
+
+        border-radius: 5%;
+        grid-area: footer;
+      }
+    </style>
+    <title>grid</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header" id="header">header</div>
+      <div class="header" id="content">content</div>
+      <div class="sidebar" id="sidebar">sidebar</div>
+      <div class="content" id="sidebar2">sidebar2</div>
+      <div class="footer" id="footer">footer</div>
+    </div>
+  </body>
+</html>
